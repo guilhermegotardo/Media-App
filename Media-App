@@ -1,0 +1,8 @@
+media-app/
+├── CMakeLists.txt
+├── include/
+│   └── MediaPlayer.h
+├── src/
+│   └── main.cpp
+├── external/           # For third-party libs (e.g., httplib, spdlog)
+└── build/              # Out-of-source build dir
