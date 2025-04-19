@@ -1,8 +1,24 @@
 media-app/
 ├── CMakeLists.txt
-├── include/
-│   └── MediaPlayer.h
+├── builds/                    # Compiled binaries
+├── include/                   # Public headers
+│   ├── core/                  # App entrypoint & high-level logic
+│   │   └── MediaPlayer.h
+│   ├── playback/              # FFmpeg integration, playback interface
+│   │   └── IPlaybackEngine.h
+│   ├── streaming/             # HTTP/HLS server module
+│   │   └── StreamServer.h
+│   └── utils/                 # Logging, config management
+│       └── Logger.h
 ├── src/
-│   └── main.cpp
-├── external/           # For third-party libs (e.g., httplib, spdlog)
-└── build/              # Out-of-source build dir
+│   ├── main.cpp
+│   ├── core/
+│   │   └── App.cpp
+│   ├── playback/
+│   │   ├── FFmpegEngine.cpp
+│   ├── streaming/
+│   │   └── StreamServer.cpp
+│   └── utils/
+│       └── Logger.cpp
+├── external/                  # Third-party libs
+└── tests/                     # Unit tests
