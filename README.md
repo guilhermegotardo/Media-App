@@ -74,7 +74,7 @@ git clone https://github.com/youruser/gotflix.git
 cd gotflix
 chmod +x build.sh
 build.sh
-
+```
 Then open http://localhost:8080 in your browser.
 
 💡 Why Gotflix?
